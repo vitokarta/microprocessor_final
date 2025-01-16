@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+  Copyright (c) 2015, 2019, Gluon and/or its affiliates.
+  All rights reserved. Use is subject to license terms.
+
+  This file is available and licensed under the following license:
+
+  Redistribution and use in source and binary forms, with or without
+  modification, are permitted provided that the following conditions
+  are met:
+
+  - Redistributions of source code must retain the above copyright
+    notice, this list of conditions and the following disclaimer.
+  - Redistributions in binary form must reproduce the above copyright
+    notice, this list of conditions and the following disclaimer in
+    the documentation and/or other materials provided with the distribution.
+  - Neither the name of Oracle Corporation nor the names of its
+    contributors may be used to endorse or promote products derived
+    from this software without specific prior written permission.
+
+  THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
+  "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
+  LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
+  A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
+  OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
+  SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
+  LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
+  DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
+  THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
+  (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
+  OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+-->
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ProgressBar?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox prefHeight="600.0" prefWidth="1050.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="code.Scene1Controller">
+  <children>
+    <AnchorPane fx:id="root" maxHeight="-1.0" maxWidth="-1.0" prefHeight="600.0" prefWidth="1038.0" VBox.vgrow="ALWAYS">
+      <children>
+            <ImageView fitHeight="600.0" fitWidth="1061.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="file:/C:/Users/vitok/OneDrive/桌面/Course%20Note/大三上/微算機/project_java/demo/resource/background2.jpg" />
+               </image>
+            </ImageView>
+
+        <!-- 生命值條 -->
+        <Label fx:id="healthLabel" layoutX="819.0" layoutY="13.0" style="-fx-font-size: 32; -fx-text-fill: black;" text="HP" />
+        <ProgressBar fx:id="healthBar" layoutX="876.0" layoutY="20.0" prefHeight="27.0" prefWidth="160.0" progress="1.0" style="-fx-accent: red;" />
+
+        <!-- 經驗條 -->
+        <ProgressBar fx:id="expBar" layoutX="10.0" layoutY="580.0" prefWidth="1030.0" progress="0.0" style="-fx-accent: darkgreen;" />
+
+        <!-- 半透明遮罩 -->
+        <AnchorPane fx:id="pauseOverlay" prefHeight="600.0" prefWidth="1050.0" style="-fx-background-color: rgba(0, 0, 0, 0.5);" visible="false">
+          <children>
+
+            <!-- 轉盤圖片 -->
+            <ImageView fx:id="spinTable" fitHeight="354.0" fitWidth="377.0" layoutX="337.0" layoutY="87.0">
+              <image>
+                <Image url="file:/C:/Users/vitok/OneDrive/桌面/Course%20Note/大三上/微算機/project_java/demo/resource/spintable.png" />
+              </image>
+            </ImageView>
+                  <ImageView fx:id="reward" fitHeight="302.0" fitWidth="301.0" layoutX="376.0" layoutY="113.0" visible="false" />
+
+            <!-- 提示文字 -->
+            <Label fx:id="spinLabel" layoutX="432.0" layoutY="434.0" style="-fx-font-size: 20px; -fx-text-fill: white;" text="Press button to spin" />
+
+          </children>
+        </AnchorPane>
+
+      </children>
+    </AnchorPane>
+  </children>
+</VBox>
